@@ -6,29 +6,39 @@ class post{
 public:
     std:: string nadawca, odbiorca, temat, tresc ;
 
+    void wczytaj();
+    void wypisz();
 
 };
 
-void wypisz (post p){
+void post::wypisz (){
 
-    std::cout<<"nadawca : "<<p.nadawca<<std::endl;
-    std::cout<<"odbiorca : "<<p.odbiorca<<std::endl;
-    std::cout<<"temat : "<<p.temat<<std::endl;
-    std::cout<<"tresc : "<<p.tresc<<std::endl;
+    std::cout<<"nadawca : "<<nadawca<<std::endl;
+    std::cout<<"odbiorca : "<<odbiorca<<std::endl;
+    std::cout<<"temat : "<<temat<<std::endl;
+    std::cout<<"tresc : "<<tresc<<std::endl;
 
 
 }
 
+void post::wczytaj() {
+
+    std::cout << "Podaj_nadawce:";
+    std::cin >> nadawca;
+    std::cout << "Podaj_temat";
+    std::cin >> temat;
+
+
+    
+}
 
 int main() {
 
 
 
 post p;
-
-
-
-
+    p.wczytaj();
+    p.wypisz();
 
     return 0;
 }
